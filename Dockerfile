@@ -1,11 +1,15 @@
-FROM node:18.12.1-buster
+FROM node:23-bookworm
 
 RUN apt-get update
 
 RUN apt-get install -y \
     python3 python3-pip
 
-RUN pip install markitdow==0.0.1a3
+RUN apt-get install -y pipx
+
+RUN pipx install markitdown
+
+RUN ln -s /root/.local/pipx/venvs/markitdown/bin/markitdown /usr/bin/
 
 # COPY package.json /
 # RUN npm install

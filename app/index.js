@@ -18,27 +18,27 @@ let main = async function () {
     let file = files[i]
     
     let filename = path.basename(file)
-    let dirname = path.dirname(file)
+    // let dirname = path.dirname(file)
     let filenameNoExt = path.parse(filename).name
     let ext = path.extname(filename)
-    if (ext !== '.pdf' || filename.endsWith('-clean.pdf')) {
+    if (ext === '.md' || ext === '.txt' || ext === '.html' || ext === '.htm') {
       continue
     }
 
-    let fileTmp = `/tmp/input.pdf`
+    let fileTmp = `/tmp/input`
     if (fs.existsSync(fileTmp)) {
       fs.unlinkSync(fileTmp)
     }
     await ShellExec(`cp "${file}" ${fileTmp}`)
 
-    let cleanPDFfileTmp = `/tmp/output.pdf`
-    if (fs.existsSync(cleanPDFfileTmp)) {
-      fs.unlinkSync(cleanPDFfileTmp)
+    let fileOutputTmp = `/tmp/output`
+    if (fs.existsSync(fileOutputTmp)) {
+      fs.unlinkSync(fileOutputTmp)
     }
-    await ShellExec(`pdftk "${fileTmp}" output - uncompress | sed '/^\\/Annots/d' | pdftk - output "${cleanPDFfileTmp}" compress`)
+    await ShellExec(`markitdown "${fileTmp}" > ${fileOutputTmp}`)
 
-    let cleanPDFfile = '/output/' + filenameNoExt + '-clean.pdf'
-    await ShellExec(`cp "${cleanPDFfileTmp}" "${cleanPDFfile}"`)
+    let fileOutput = '/output/' + filenameNoExt + '.md'
+    await ShellExec(`cp "${fileOutputTmp}" "${fileOutput}"`)
   }
 }
 

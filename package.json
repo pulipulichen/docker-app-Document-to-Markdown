@@ -4,7 +4,7 @@
   "description": "Converts documents to Markdown format.",
   "main": "index.js",
   "scripts": {
-    "start": "git add .; git commit -m \"ok\"; git push",
+    "start": "docker-compose build",
     "commit-docker-image": "docker-compose build; bash ./docker-build/image/commit-docker-image.sh",
     "d0.build": "docker-compose build",
     "d1.bash": "docker-compose run app bash",
