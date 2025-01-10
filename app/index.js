@@ -21,7 +21,7 @@ let main = async function () {
     // let dirname = path.dirname(file)
     let filenameNoExt = path.parse(filename).name
     let ext = path.extname(filename)
-    if (ext === '.md' || ext === '.txt' || ext === '.html' || ext === '.htm') {
+    if (ext === '.md' || ext === '.txt') {
       continue
     }
 
