@@ -27,6 +27,7 @@
     "url": "https://blog.pulipuli.info"
   },
   "license": "MIT",
+  "doi": "10.5281/zenodo.14625867",
   "bugs": {
     "url": "https://github.com/pulipulichen/docker-app-Document-to-Markdown/issues"
   },

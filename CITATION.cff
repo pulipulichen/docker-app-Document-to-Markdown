@@ -9,3 +9,6 @@ title: "docker-app-Document-to-Markdown"
 license: "MIT"
 repository-code: "https://github.com/pulipulichen/docker-app-Document-to-Markdown"
 abstract: "Converts documents to Markdown format."
+identifiers:
+  - type: doi
+    value: 10.5281/zenodo.14625867

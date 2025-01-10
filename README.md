@@ -1,4 +1,4 @@
-@TODO: DOI
+[![DOI](https://zenodo.org/badge/914693902.svg)](https://doi.org/10.5281/zenodo.14625867)
 
 # docker-app-Document-to-Markdown: 將文件轉換成Markdown格式。
 
