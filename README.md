@@ -28,4 +28,4 @@ https://colab.research.google.com/github/pulipulichen/docker-app-Document-to-Mar
 
 # Citation
 
-@TODO
+Chen, Y.-T. (2025). *Docker-app-Document-to-Markdown* (Version 20250110.150420) [Computer software]. Zenodo. [https://doi.org/10.5281/ZENODO.14625867](https://doi.org/10.5281/ZENODO.14625867)
