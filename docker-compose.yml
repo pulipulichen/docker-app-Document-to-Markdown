@@ -8,5 +8,5 @@ services:
       - ./app:/app/
       - ./cache:/cache/
       - ./example folder:/input/
-      - ./example folder:/input/
-      - ./example folder:/output/
+      #- ./example folder:/input/
+      #- ./example folder:/output/
