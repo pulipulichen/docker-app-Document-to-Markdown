@@ -35,7 +35,7 @@ let main = async function () {
     if (fs.existsSync(fileOutputTmp)) {
       fs.unlinkSync(fileOutputTmp)
     }
-    await ShellExec(`markitdown "${fileTmp}" > ${fileOutputTmp}`)
+    await ShellExec(`/usr/bin/markitdown "${fileTmp}" > ${fileOutputTmp}`)
 
     let fileOutput = '/output/' + filenameNoExt + '.md'
     await ShellExec(`cp "${fileOutputTmp}" "${fileOutput}"`)
