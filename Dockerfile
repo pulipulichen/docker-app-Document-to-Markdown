@@ -11,6 +11,8 @@ RUN pipx install markitdown
 
 RUN ln -s /root/.local/pipx/venvs/markitdown/bin/markitdown /usr/bin/
 
+RUN apt install poppler-utils -y
+
 # COPY package.json /
 # RUN npm install
 

@@ -25,6 +25,12 @@ let main = async function () {
       continue
     }
 
+    if (ext === '.pdf') {
+      let fileHTMLtmp = `/tmp/input.html`
+      await ShellExec(`pdftohtml "${file}" ${fileHTMLtmp}`)
+      file = fileHTMLtmp
+    }
+
     let fileTmp = `/tmp/input`
     if (fs.existsSync(fileTmp)) {
       fs.unlinkSync(fileTmp)
