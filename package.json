@@ -1,0 +1,38 @@
+{
+  "name": "docker-app-Document-to-Markdown",
+  "version": "1.0.0",
+  "description": "Converts documents to Markdown format.",
+  "main": "index.js",
+  "scripts": {
+    "start": "git add .; git commit -m \"ok\"; git push",
+    "commit-docker-image": "docker-compose build; bash ./docker-build/image/commit-docker-image.sh",
+    "d0.build": "docker-compose build",
+    "d1.bash": "docker-compose run app bash",
+    "d2.up": "docker-compose up",
+    "update": "node update.js",
+    "tag": "./build/tag.sh"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://pulipuli.chen@gmail.com@github.com/pulipulichen/docker-app-Document-to-Markdown.git"
+  },
+  "keywords": [
+    "Docker-APP",
+    "PDF"
+  ],
+  "author": {
+    "name": "Yung-Ting Chen",
+    "email": "blog@pulipuli.info",
+    "orcid": "https://orcid.org/0000-0003-3751-610X",
+    "url": "https://blog.pulipuli.info"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/pulipulichen/docker-app-Document-to-Markdown/issues"
+  },
+  "homepage": "https://github.com/pulipulichen/docker-app-Document-to-Markdown#readme",
+  "dependencies": {
+    "jquery": "3.6.3",
+    "jsdom": "21.1.0"
+  }
+}
